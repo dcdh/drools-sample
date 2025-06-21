@@ -1,0 +1,8 @@
+import com.sample.memberof.model.Applicant
+
+rule Display when
+   $applicant : Applicant(name memberOf "George,Paul")
+//   $applicant : Applicant(name in ("George","Paul"))
+then
+   System.out.println($applicant);
+end
