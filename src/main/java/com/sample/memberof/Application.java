@@ -18,9 +18,9 @@ public class Application {
 
     public void onStart(@Observes StartupEvent ev) {
         try (KieSession session = kieRuntimeBuilder.newKieSession()) {
-            session.insert(new Applicant("John"));
-            session.insert(new Applicant("Paul"));
-            session.insert(new Applicant("George"));
+            session.insert(new Applicant("John", true));
+            session.insert(new Applicant("Paul", true));
+            session.insert(new Applicant("George", true));
 
             int i = session.fireAllRules();
             Log.infov("Nb of rules fired {0}", i);

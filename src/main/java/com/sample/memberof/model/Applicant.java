@@ -1,4 +1,4 @@
 package com.sample.memberof.model;
 
-public record Applicant(String name) {
+public record Applicant(String name, boolean valid) {
 }
